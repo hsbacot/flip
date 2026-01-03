@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -29,7 +30,8 @@
     <nav class="fixed top-0 w-full z-50 glass border-b border-gray-200">
         <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
             <div class="flex items-center space-x-2">
-                <img src="assets/naturalTemplate.png" class="w-6 h-6 object-contain" alt="Flip">
+                <img src="assets/naturalTemplate.png" srcset="assets/naturalTemplate@2x.png 2x"
+                    class="w-6 h-6 object-contain" alt="Flip">
                 <span class="font-bold text-xl tracking-tight">Flip</span>
             </div>
             <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
@@ -38,7 +40,10 @@
                 <a href="https://github.com/hsbacot/flip" class="hover:text-black transition">GitHub</a>
             </div>
             <a href="https://github.com/hsbacot/flip"
-                class="bg-black text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-800 transition shadow-lg">Download</a>
+                class="bg-black text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-800 transition shadow-lg flex items-center space-x-2">
+                <span>Download</span>
+                <i data-lucide="download" class="w-4 h-4"></i>
+            </a>
         </div>
     </nav>
 
@@ -60,12 +65,14 @@
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
                 <a href="https://github.com/hsbacot/flip"
-                    class="w-full sm:w-auto bg-black text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:scale-105 active:scale-95 transition-all shadow-xl">
-                    Get Started on GitHub
+                    class="w-full sm:w-auto bg-black text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:scale-105 active:scale-95 transition-all shadow-xl flex items-center justify-center space-x-2">
+                    <span>Get Started on GitHub</span>
+                    <i data-lucide="github" class="w-5 h-5"></i>
                 </a>
                 <a href="#features"
-                    class="w-full sm:w-auto px-8 py-4 rounded-2xl text-lg font-semibold text-gray-700 hover:bg-gray-100 transition shadow-sm border border-gray-200">
-                    See Features
+                    class="w-full sm:w-auto px-8 py-4 rounded-2xl text-lg font-semibold text-gray-700 hover:bg-gray-100 transition shadow-sm border border-gray-200 flex items-center justify-center space-x-2">
+                    <span>See Features</span>
+                    <i data-lucide="chevron-right" class="w-5 h-5"></i>
                 </a>
             </div>
         </div>
@@ -78,7 +85,8 @@
                 <div class="space-y-4">
                     <div
                         class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center shadow-inner">
-                        <img src="assets/standardTemplate.png" class="w-8 h-8 object-contain" alt="Standard">
+                        <img src="assets/standardTemplate.png" srcset="assets/standardTemplate@2x.png 2x"
+                            class="w-8 h-8 object-contain" alt="Standard">
                     </div>
                     <h3 class="text-xl font-bold">Menu Bar Access</h3>
                     <p class="text-gray-600 leading-relaxed"> No more digging through System Settings. Toggle your
@@ -87,7 +95,8 @@
                 <div class="space-y-4">
                     <div
                         class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center shadow-inner">
-                        <img src="assets/naturalTemplate.png" class="w-8 h-8 object-contain" alt="Natural">
+                        <img src="assets/naturalTemplate.png" srcset="assets/naturalTemplate@2x.png 2x"
+                            class="w-8 h-8 object-contain" alt="Natural">
                     </div>
                     <h3 class="text-xl font-bold">Visual Indicators</h3>
                     <p class="text-gray-600 leading-relaxed">Dynamic icons show your current mode at a glance. Easily
@@ -120,20 +129,23 @@
                 <div class="space-y-4">
                     <div class="flex items-start space-x-4">
                         <div
-                            class="mt-1 flex-shrink-0 w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-[10px] font-bold">
-                            ✓</div>
+                            class="mt-1 flex-shrink-0 w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center shadow-sm">
+                            <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+                        </div>
                         <p class="text-gray-700 font-medium">Auto-detects current system state on startup.</p>
                     </div>
                     <div class="flex items-start space-x-4">
                         <div
-                            class="mt-1 flex-shrink-0 w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-[10px] font-bold">
-                            ✓</div>
+                            class="mt-1 flex-shrink-0 w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center shadow-sm">
+                            <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+                        </div>
                         <p class="text-gray-700 font-medium">Zero-configuration background service.</p>
                     </div>
                     <div class="flex items-start space-x-4">
                         <div
-                            class="mt-1 flex-shrink-0 w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-[10px] font-bold">
-                            ✓</div>
+                            class="mt-1 flex-shrink-0 w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center shadow-sm">
+                            <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+                        </div>
                         <p class="text-gray-700 font-medium">Open source and privacy-focused.</p>
                     </div>
                 </div>
@@ -156,16 +168,17 @@
                         <div
                             class="flex items-center justify-between p-3 bg-blue-600 text-white rounded-xl shadow-lg ring-4 ring-blue-100">
                             <div class="flex items-center space-x-3">
-                                <img src="assets/naturalTemplate.png" class="w-5 h-5 object-contain brightness-0 invert"
-                                    alt="Natural">
+                                <img src="assets/naturalTemplate.png" srcset="assets/naturalTemplate@2x.png 2x"
+                                    class="w-5 h-5 object-contain brightness-0 invert" alt="Natural">
                                 <span class="font-semibold text-sm">Natural Scrolling</span>
                             </div>
-                            <span class="text-xs">✓</span>
+                            <i data-lucide="check" class="w-4 h-4"></i>
                         </div>
                         <div
                             class="flex items-center justify-between p-3 hover:bg-gray-100 rounded-xl transition cursor-pointer">
                             <div class="flex items-center space-x-3">
-                                <img src="assets/standardTemplate.png" class="w-5 h-5 object-contain" alt="Standard">
+                                <img src="assets/standardTemplate.png" srcset="assets/standardTemplate@2x.png 2x"
+                                    class="w-5 h-5 object-contain" alt="Standard">
                                 <span class="font-semibold text-sm text-gray-700">Standard Scrolling</span>
                             </div>
                         </div>
@@ -217,6 +230,9 @@ mv Flip.app /Applications</pre>
             </div>
         </div>
     </footer>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 
 </html>
