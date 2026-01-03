@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.hsbacot.flip</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/hsbacot/dev/flip/Flip.app/Contents/MacOS/Flip</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <false/>
+    <key>StandardOutPath</key>
+    <string>/tmp/flip.stdout.log</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/flip.stderr.log</string>
+</dict>
+</plist>
