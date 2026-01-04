@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # 1. Build the binary
-go build -o Flip .
+go clean -cache
+MACOSX_DEPLOYMENT_TARGET=15.0 CGO_CFLAGS="-mmacosx-version-min=15.0" CGO_LDFLAGS="-mmacosx-version-min=15.0" go build -o Flip .
 
 # 2. Create the bundle structure
 mkdir -p Flip.app/Contents/MacOS

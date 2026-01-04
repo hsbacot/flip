@@ -1,22 +1,31 @@
 package main
 
 import (
-	"github.com/caseymrm/menuet"
+	"log"
+	"os"
 )
 
 func main() {
+	// Handle CLI toggles
+	if len(os.Args) > 1 && os.Args[1] == "--toggle" {
+		current := getScrollState()
+		setScrollState(!current)
+		return
+	}
+
 	// 1. Initial State
-	menuet.App().HideStartup()
 	initialState := getScrollState()
 	updateState(initialState)
 
 	// 2. Start System Watcher
 	go watchPreferences()
 
-	// 3. Configure Application
-	menuet.App().Label = "Flip"
-	menuet.App().Children = menuItems
+	// 3. Setup UI
+	setupUI()
 
 	// 4. Run loop
-	menuet.App().RunApplication()
+	err := wailsApp.Run()
+	if err != nil {
+		log.Fatal(err)
+	}
 }

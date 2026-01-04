@@ -2,8 +2,6 @@ package main
 
 import (
 	"sync"
-
-	"github.com/caseymrm/menuet"
 )
 
 var (
@@ -21,8 +19,7 @@ func updateState(natural bool) {
 	currentIsNatural = natural
 	stateMutex.Unlock()
 
-	updateLabel(natural)
-	menuet.App().MenuChanged()
+	refreshUI()
 }
 
 // getState returns the current scroll state in a thread-safe manner
