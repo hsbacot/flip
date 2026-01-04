@@ -1,4 +1,4 @@
-# Flip 💻🖱️
+# Flip
 
 **Flip** is a tiny, native macOS menu bar utility that allows you to instantly toggle between "Natural" and "Standard" scrolling. 
 
@@ -6,10 +6,11 @@ It's perfect for users who frequently switch between a Trackpad (where Natural s
 
 ## Features
 
-- **One-Click Toggle**: Switch scroll direction directly from the menu bar.
-- **Visual Indicators**: The menu bar icon changes to reflect the current mode (💻 for Natural, 🖱️ for Standard).
-- **Native Experience**: Built with Go and the `menuet` library for a lightweight, native feel.
-- **Fast & Reliable**: Updates system settings and refreshes preferences immediately.
+- **Instant Toggle**: Switch scroll direction directly from the menu bar with zero lag.
+- **Visual Indicators**: Dynamic "Template" icons change to reflect the current mode.
+- **Raycast Integration**: Control Flip via keyboard shortcuts using the built-in `--toggle` CLI flag.
+- **Optimized Performance**: High-speed icon caching ensures an instantaneous UI response.
+- **Launch at Login**: Easily toggle the background service to start when you log in.
 
 ## Installation
 
@@ -36,37 +37,20 @@ Currently, Flip is provided as a source project. You can build it yourself using
 ## Usage
 
 1. Launch **Flip**.
-2. Look for the 💻 or 🖱️ icon in your menu bar.
-3. Click the icon to see the current state or switch to the other mode.
+2. Look for the toggle icon in your menu bar.
+3. Click the icon to switch modes or manage settings.
 
-## Launch on Login
+### Raycast Integration
 
-To have Flip start automatically when you log in to your Mac, you can use one of the following methods:
+You can toggle Flip using Raycast (or any other macro tool) by calling the binary with the `--toggle` flag:
 
-### Method 1: System Settings (easiest)
-1. Open **System Settings**.
-2. Go to **General** > **Login Items**.
-3. Under **Open at Login**, click the **+** button.
-4. Navigate to your `/Applications` folder and select **Flip.app**.
-
-### Method 2: Launch Agent (command line)
-If you want to use the provided `com.hsbacot.flip.plist`:
-1. Copy the plist to your LaunchAgents directory:
-   ```bash
-   cp com.hsbacot.flip.plist ~/Library/LaunchAgents/
-   ```
-2. Load the agent:
-   ```bash
-   launchctl load ~/Library/LaunchAgents/com.hsbacot.flip.plist
-   ```
-   *Note: Ensure the path in the plist (`../Flip.app/Contents/MacOS/Flip`) matches your actual installation path.*
+```bash
+/Applications/Flip.app/Contents/MacOS/Flip --toggle
+```
 
 ## Technical Details
 
 - **Language**: Go (Golang)
-- **Library**: [github.com/caseymrm/menuet](https://github.com/caseymrm/menuet)
+- **Framework**: [Wails v3](https://v3alpha.wails.io/)
 - **Settings**: Modifies `com.apple.swipescrolldirection` in `NSGlobalDomain`.
-
----
-
-[nsFlip.com](https://nsFlip.com)
+- **UI**: Native macOS Menu Bar integration with Template Icon support.

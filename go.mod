@@ -1,4 +1,4 @@
-module nsflip.com/flip
+module github.com/hsbacot/flip
 
 go 1.25.5
 
